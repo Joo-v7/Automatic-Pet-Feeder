@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>Enter feed time</title>
+</head>
+<body>
+	<h2>Enter feed time</h2>
+	<p>Example: 9:30, 12:00, 21:30</p>
+	<form action="/result" method="post">
+		<input type="hidden" name="count" value="{{ count }}">
+		{% for i in range(1, count +1) %}
+			<label for="time{{ i }}">Count {{ i }} time (h m):</label>
+			<input type="text" name="time{{ i }}" id="time{{ i }}"><br>
+		{% endfor %}
+		<input type="submit" value="Enter">
+	</form>
+</body>
+</html>
+
